@@ -143,19 +143,37 @@ body {
     top: 50%;
     right: -700px; /* starter gemt */
     transform: translateY(-50%);
-    width:600px;
+    width: 600px;
     height: 600px;
-
-    background-image: url("images/nyhedsbrev.webp");
-    background-size: cover;
-    background-position: center;
-
-    padding:20px;
+    padding: 20px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     transition: right 0.4s ease;
     z-index: 1000;
+    background: none; /* vigtigt – billedet flyttes til ::before */
+    overflow: hidden; /* vigtigt – skjuler slørede kanter */
+    color: white;
 
 }
+
+/* Laver det slørede baggrundsbillede */
+.newsletter-popup::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("images/nyhedsbrev.webp");
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);       /* ← slør billedet */
+    transform: scale(1.1);   /* ← forhindrer blur-kanter */
+    z-index: 0;
+}
+
+/* Gør alt indholdet ovenpå billedet */
+.newsletter-popup > * {
+    position: relative;
+    z-index: 1;
+}
+
 
 .newsletter-popup.open {
     right: 20px; /* folder ud */
@@ -186,8 +204,8 @@ body {
 .submit-btn {
     width: 100%;
     padding: 12px;
-    background: black;
-    color: white;
+    background: white;
+    color:black;
     border: none;
     cursor: pointer;
     margin-top: 10px;
@@ -196,6 +214,7 @@ body {
 
 .submit-btn:hover {
     background: #333;
+    color: white;
 }
 
 /******** PRODUCT LAYOUT ********/
