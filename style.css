@@ -1,7 +1,7 @@
 /* Reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { 
-    font-family:'montserrat'; 
+    font-family:'Montserrat'; 
 }
 
 /******** HEADER ********/
@@ -52,7 +52,11 @@ body {
     color: #260E17;
     font-family: quicksand;
     font-weight: 500;
+    font-family: "Montserrat";
+    font-weight: bold;
 }
+
+
 
 .topbar {
     background-color: #cecfd1;  /* samme farve som dit screenshot */
