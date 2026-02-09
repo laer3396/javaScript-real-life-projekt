@@ -141,34 +141,42 @@ body {
 .newsletter-popup {
     position: fixed;
     top: 50%;
-    right: -700px; /* starter gemt */
+    right: -700px;
     transform: translateY(-50%);
     width: 600px;
     height: 600px;
+
     padding: 20px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     transition: right 0.4s ease;
     z-index: 1000;
-    background: none; /* vigtigt – billedet flyttes til ::before */
-    overflow: hidden; /* vigtigt – skjuler slørede kanter */
+    overflow: hidden;
     color: white;
-
+    /* CENTERING */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  /* ↓↓ */
+    align-items: center;      /* midten! */
+    text-align: center;
 }
 
-/* Laver det slørede baggrundsbillede */
+/* Sløret baggrund */
 .newsletter-popup::before {
     content: "";
     position: absolute;
     inset: 0;
+
     background-image: url("images/nyhedsbrev.webp");
     background-size: cover;
     background-position: center;
-    filter: blur(4px);       /* ← slør billedet */
-    transform: scale(1.1);   /* ← forhindrer blur-kanter */
+
+    filter: blur(5px);
+    transform: scale(1.1);
     z-index: 0;
+  
 }
 
-/* Gør alt indholdet ovenpå billedet */
+/* Indhold over baggrunden */
 .newsletter-popup > * {
     position: relative;
     z-index: 1;
@@ -190,7 +198,13 @@ body {
 }
 
 .newsletter-popup h2 {
-    margin-top: 0;
+    margin-bottom:10px;
+}
+
+.newsletter-popup p{
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-top: 25px;
 }
 
 .newsletter-popup input {
