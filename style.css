@@ -1,40 +1,96 @@
 /* Reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { 
-    font-family:Montserrat; 
+    font-family:'montserrat'; 
 }
 
 /******** HEADER ********/
-.site-header {
+/* LAYOUT FOR HELE HEADEREN */
+.navbar {
     background-color: #A8A9AD;
-    color:black;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 5%;
 }
 
+/* VENSTRE OG HØJRE SKAL FYLDE LIGE MEGET */
+.nav-left,
+.nav-right {
+    flex: 1;  /* Gør at midter-menuen kommer i perfekt center */
+}
 
-.navbar {
+/* MIDTER MENU (CENTRERET) */
+.nav-menu {
     display: flex;
+    justify-content: center;
+    gap: 35px;
+    flex: 0; /* vigtigt: så den ikke skubber center ud */
+}
+
+/* LOGO */
+.nav-logo img {
+    height: 100px;
+    width: auto;
+}
+
+/* HØJRE SEKTION (4 IKONER) */
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.nav-right img {
+    width: 70px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* LINKS */
+.nav-link {
+    text-decoration: none;
+    color: #260E17;
+    font-family: quicksand;
+    font-weight: 500;
+}
+
+.topbar {
+    background-color: #cecfd1;  /* samme farve som dit screenshot */
+    color: #3F4044;             /* mørkegrå tekst */
+    font-family: Quicksand, sans-serif;
+    font-size: 14px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 8px 5%;
+}
+
+/* Venstreside: ikon + tekst */
+.topbar-left {
+    display: flex;
+    gap: 30px;
     align-items: center;
 }
 
-
-.nav-logo img {
-    width: 200px;
-    height: auto;
-}
-
-/* DESKTOP MENU – VANDRET */
-
-
-.nav-menu {
+.top-item {
     display: flex;
-    justify-content: center; 
-    gap: 30px;
-    font-family: bold;
+    align-items: center;
+    gap: 6px;
 }
 
+/* Højreside */
+.topbar-right {
+    display: flex;
+    gap: 20px;
+}
+
+.topbar-right a {
+    color: #3F4044;
+    text-decoration: none;
+}
 
 
 /******** BREADCRUMBS ********/
