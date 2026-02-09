@@ -2,6 +2,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { 
     font-family:'Montserrat'; 
+    font-weight: 300;
 }
 
 /******** HEADER ********/
@@ -54,6 +55,10 @@ body {
     font-weight: 500;
     font-family: "Montserrat";
     font-weight: bold;
+}
+
+.sale {
+    color: rgb(218, 218, 8);
 }
 
 
