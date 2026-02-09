@@ -115,19 +115,20 @@ body {
    font-size: 12px;
 }
 .breadcrumbs a { color: #666; }
+
 /* Sidetab */
 .newsletter-tab {
     position: fixed;
     right: 0;
     top: 40%;
     background: #f1f1f1;
-    padding: 10px 20px;
+    padding: 70px 20px;
     font-size: 14px;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     cursor: pointer;
     border-radius: 6px 0 0 6px;
-    transition: background 0.3s;
+    transition: 0.3s;
     z-index: 999;
 }
 
@@ -135,18 +136,25 @@ body {
     background: #e2e2e2;
 }
 
-/* Popup */
+/* Popup nyhedsbrev*/
+
 .newsletter-popup {
     position: fixed;
     top: 50%;
-    right: -400px; /* starter gemt */
+    right: -700px; /* starter gemt */
     transform: translateY(-50%);
-    width: 350px;
-    background: white;
-    padding: 25px;
+    width:600px;
+    height: 600px;
+
+    background-image: url("images/nyhedsbrev.webp");
+    background-size: cover;
+    background-position: center;
+
+    padding:20px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     transition: right 0.4s ease;
     z-index: 1000;
+
 }
 
 .newsletter-popup.open {
