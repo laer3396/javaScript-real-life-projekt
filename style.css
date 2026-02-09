@@ -183,12 +183,14 @@ padding: 0;
     padding: 18px 0;
     font-size: 18px;
     font-family: "Quicksand", sans-serif;
-    border: 2px solid #3F4044;
+    border: 1px solid #000000;
     background: white;
     cursor: pointer;
     text-transform: lowercase;
     color: #3F4044;
     transition: 0.2s;
+    font-family: 'Montserrat';
+    font-weight: 500;
 }
 
 .add-to-cart-btn:hover {
@@ -199,7 +201,7 @@ padding: 0;
 .wishlist-btn {
     width: 70px;
     height: 70px;
-    border: 2px solid #3F4044;
+    border: 1px solid #000000;
     background: white;
     display: flex;
     align-items: center;
