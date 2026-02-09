@@ -115,6 +115,80 @@ body {
    font-size: 12px;
 }
 .breadcrumbs a { color: #666; }
+/* Sidetab */
+.newsletter-tab {
+    position: fixed;
+    right: 0;
+    top: 40%;
+    background: #f1f1f1;
+    padding: 10px 20px;
+    font-size: 14px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    cursor: pointer;
+    border-radius: 6px 0 0 6px;
+    transition: background 0.3s;
+    z-index: 999;
+}
+
+.newsletter-tab:hover {
+    background: #e2e2e2;
+}
+
+/* Popup */
+.newsletter-popup {
+    position: fixed;
+    top: 50%;
+    right: -400px; /* starter gemt */
+    transform: translateY(-50%);
+    width: 350px;
+    background: white;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transition: right 0.4s ease;
+    z-index: 1000;
+}
+
+.newsletter-popup.open {
+    right: 20px; /* folder ud */
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.newsletter-popup h2 {
+    margin-top: 0;
+}
+
+.newsletter-popup input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+.submit-btn:hover {
+    background: #333;
+}
 
 /******** PRODUCT LAYOUT ********/
 .product-layout {
@@ -395,7 +469,6 @@ padding: 0;
 .feature-item img {
     width: 200px;
     height: auto;
-   
 }
 
 
