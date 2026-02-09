@@ -231,6 +231,32 @@ body {
     color: white;
 }
 
+#thankyouView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    color: white;
+}
+
+#thankyouView .logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.shop-btn {
+    display: block;
+    background: white;
+    color: black;
+    padding: 16px 40px;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-size: 18px;
+    text-decoration: none;
+}
+
 /******** PRODUCT LAYOUT ********/
 .product-layout {
     max-width: 1200px;
