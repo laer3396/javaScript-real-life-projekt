@@ -480,48 +480,12 @@ padding: 0;
   align-self: center;
 }
 .footer-brand img{
-  width: 110px;  /* justér efter dit logo */
-  height: auto;
-  opacity: .9;
+  width:500px;  /* justér efter dit logo */
+
+
 }
 
-/* ---------- Nederste bar ---------- */
-.footer-bottom{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 5%;
-  gap: 20px;
-}
 
-.footer-legal-wrap{
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.trust-badge{
-  width: 22px;
-  height: 22px;
-}
-
-.footer-legal{
-  font-size: 13px;
-  line-height: 1.5;
-}
-
-.footer-payments{
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.footer-payments img{
-  height: 24px; /* ens højde på betalingsikoner */
-  width: auto;
-  display: block;
-  filter: grayscale(10%); /* let afdæmpning */
-}
 
 /* ---------- (Valgfrit) Deaktivér visning under desktop ---------- */
 /* Fjern dette hvis du altid kun bygger desktop */
