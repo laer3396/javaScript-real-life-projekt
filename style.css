@@ -3,19 +3,36 @@
 body { font-family: sans-serif; }
 
 /******** HEADER ********/
-.header {
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
+.site-header {
+    background-color: #A8A9AD;
+    color:black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-.header-inner {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
+
+/* Desktop navbar layout */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+   
 }
-.nav a { margin-right: 15px; }
+
+.nav-logo img {
+    width: 200px;
+    height: auto;
+}
+
+/* DESKTOP MENU – VANDRET */
+.nav-menu {
+    display: flex;
+    gap: 30px;
+    position: static;   /* Fjern fixed */
+    width: auto;        /* Fjern mobile fuld bredde */
+    flex-direction: row;
+    text-align: left;
+}
 
 /******** BREADCRUMBS ********/
 .breadcrumbs {
