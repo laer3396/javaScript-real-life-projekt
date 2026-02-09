@@ -259,6 +259,13 @@ padding: 0;
     background: #f5f5f5;
 }
 
+.add-to-cart-btn.added {
+    background: #3F4044;
+    color: white;
+    transform: scale(1.02);
+}
+
+
 /* HJERTE KNAP */
 .wishlist-btn {
     width: 70px;
@@ -275,6 +282,15 @@ padding: 0;
 .wishlist-btn:hover {
     background: #f5f5f5;
 }
+
+.wishlist-btn.active {
+    background: #3F4044;
+}
+
+.wishlist-btn.active svg {
+    stroke: white;
+}
+
 
 .accordion {
   border-top: 1px solid #e3e3e3;
