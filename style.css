@@ -89,6 +89,11 @@ body {
     gap: 6px;
 }
 
+.top-item img {
+    width: 60px;
+    
+}
+
 /* Højreside */
 .topbar-right {
     display: flex;
