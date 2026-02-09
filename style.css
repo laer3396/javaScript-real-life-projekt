@@ -5,13 +5,12 @@ body {
 }
 
 /******** HEADER ********/
-/* LAYOUT FOR HELE HEADEREN */
 .navbar {
     background-color: #A8A9AD;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 5%;
+    padding: 5px 5%;
 }
 
 /* VENSTRE OG HØJRE SKAL FYLDE LIGE MEGET */
