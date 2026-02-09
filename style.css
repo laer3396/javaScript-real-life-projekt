@@ -1,6 +1,8 @@
 /* Reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: sans-serif; }
+body { 
+    font-family:Montserrat; 
+}
 
 /******** HEADER ********/
 .site-header {
@@ -11,13 +13,12 @@ body { font-family: sans-serif; }
     z-index: 1000;
 }
 
-/* Desktop navbar layout */
+
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-   
 }
+
 
 .nav-logo img {
     width: 200px;
@@ -25,14 +26,16 @@ body { font-family: sans-serif; }
 }
 
 /* DESKTOP MENU – VANDRET */
+
+
 .nav-menu {
     display: flex;
+    justify-content: center; 
     gap: 30px;
-    position: static;   /* Fjern fixed */
-    width: auto;        /* Fjern mobile fuld bredde */
-    flex-direction: row;
-    text-align: left;
+    font-family: bold;
 }
+
+
 
 /******** BREADCRUMBS ********/
 .breadcrumbs {
