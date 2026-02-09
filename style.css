@@ -112,6 +112,7 @@ body {
     margin: 15px auto;
     padding: 0 20px;
     color: #666;
+   font-size: 12px;
 }
 .breadcrumbs a { color: #666; }
 
@@ -145,6 +146,10 @@ body {
     padding: 0px;
 }
 
+.buybox img{
+width: 45px;
+padding: 0;
+}
 
 .product-badges {
     display: flex;
@@ -247,4 +252,47 @@ body {
 .product-card img {
     width: 100%;
     margin-bottom: 10px;
+}
+
+
+.feature-box {
+    width: 700px;
+    margin-left: 180px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #D0D1D3; /* samme gråt som dit screenshot */
+    padding: 40px 20px;
+}
+
+.feature-item {
+    flex: 1;
+    text-align: center;
+    padding: 30px 10px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    border-radius: 4px;
+}
+
+.feature-item img {
+    width: 55px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #3F4044;
+    font-family: "Quicksand", sans-serif;
+}
+
+/* Hover-effekt */
+.feature-item:hover {
+    background-color: #C2C3C5;
+}
+
+/* Aktiv (fremhævet) boks */
+.feature-item.active {
+    background-color: #A8A9AD;
 }
