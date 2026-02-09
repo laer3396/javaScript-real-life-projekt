@@ -387,3 +387,128 @@ padding: 0;
 .feature-item:hover {
     background-color: #C2C3C5;
 }
+
+/* ---------- Farver og base ---------- */
+:root{
+  --footer-bg: #BBBCBF;   /* lys grå baggrund */
+  --footer-line: #A8A9AD; /* linjer */
+  --text-dark: #3F4044;   /* mørk grå tekst */
+}
+
+.site-footer.desktop-only{
+  background: var(--footer-bg);
+  color: var(--text-dark);
+  font-family: "Montserrat", system-ui, sans-serif;
+}
+
+/* ---------- Øverste blok ---------- */
+.footer-top{
+  border-top: 1px solid var(--footer-line);
+  border-bottom: 1px solid var(--footer-line);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr; /* social | links | logo */
+  gap: 40px;
+  padding: 40px 5%;
+  align-items: start;
+}
+
+/* Sociale ikoner (venstre) */
+.footer-social{
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.social-btn{
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--text-dark);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  transition: background .2s ease, opacity .2s ease;
+  text-decoration: none;
+}
+.social-btn img{ width: 22px; height: 22px; display: block; }
+.social-btn:hover{ background: rgba(0,0,0,0.06); }
+
+/* Link-kolonner (midt) */
+.footer-links{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: 32px 48px;
+}
+
+.footer-col h4{
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
+.footer-col a{
+  display: block;
+  color: var(--text-dark);
+  text-decoration: none;
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.footer-col a:hover{ opacity: .8; }
+
+/* Logo (højre) */
+.footer-brand{
+  justify-self: end;
+  align-self: center;
+}
+.footer-brand img{
+  width: 110px;  /* justér efter dit logo */
+  height: auto;
+  opacity: .9;
+}
+
+/* ---------- Nederste bar ---------- */
+.footer-bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 5%;
+  gap: 20px;
+}
+
+.footer-legal-wrap{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.trust-badge{
+  width: 22px;
+  height: 22px;
+}
+
+.footer-legal{
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.footer-payments{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-payments img{
+  height: 24px; /* ens højde på betalingsikoner */
+  width: auto;
+  display: block;
+  filter: grayscale(10%); /* let afdæmpning */
+}
+
+/* ---------- (Valgfrit) Deaktivér visning under desktop ---------- */
+/* Fjern dette hvis du altid kun bygger desktop */
+@media (max-width: 1023px){
+  .site-footer.desktop-only{ display: none; }
+}
