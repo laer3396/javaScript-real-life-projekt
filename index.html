@@ -4,22 +4,21 @@
     <meta charset="utf-8">
     <title>Kula Skaljakke Kvinder – Produktlayout</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+<!-- 🔹 TOPBAR -->
 <div class="topbar">
+
     <div class="topbar-left">
-        <div class="top-item">
-            ✓
-            Fri fragt ved køb over 499 kr.
-        </div>
-        <div class="top-item">
-            ⇄
-          30 dages gratis retur
-        </div>
+        <div class="top-item">✓ Fri fragt ved køb over 499 kr.</div>
+        <div class="top-item">⇄ 30 dages gratis retur</div>
         <div class="top-item">
             <img src="images/lastbil_icon.png" alt="">
             Hurtig levering 1-2 hverdage
@@ -29,12 +28,12 @@
     <div class="topbar-right">
         <a href="#">Om os</a>
         <a href="#">Kontakt os</a>
-        <a href="#" class="lang">
-             DK ▼
-        </a>
+        <a href="#" class="lang">DK ▼</a>
     </div>
+
 </div>
 
+<!-- 🔹 HEADER / NAVIGATION -->
 <header class="site-header">
     <nav class="navbar">
 
@@ -47,23 +46,24 @@
 
         <!-- MIDTER SEKTION: MENU -->
         <div class="nav-menu">
-            <a href="" class="nav-link">Shop</a>
-            <a href="" class="nav-link">About</a>
-            <a href="" class="nav-link">Legacy</a>
-            <a href="" class="nav-link sale">Sale</a>
+            <a href="#" class="nav-link">Shop</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Legacy</a>
+            <a href="#" class="nav-link sale">Sale</a>
         </div>
 
-        <!-- HØJRE SEKTION: 4 BILLEDER PÅ EN RÆKKE -->
+        <!-- HØJRE SEKTION: IKONER -->
         <div class="nav-right">
-            <img src="images/søge_icon.png" alt="">
-            <img src="images/profil_icon.png" alt="">
-            <img src="images/Favorit_icon.png" alt="">
-            <img src="images/Kurv_icon.png" alt="">
+            <img src="images/søge_icon.png" alt="Søg">
+            <img src="images/profil_icon.png" alt="Profil">
+            <img src="images/Favorit_icon.png" alt="Favorit">
+            <img src="images/Kurv_icon.png" alt="Kurv">
         </div>
 
     </nav>
 </header>
 
+<!-- 🔹 BREADCRUMBS -->
 <nav class="breadcrumbs">
     <a href="#">Forside</a> /
     <a href="#">Kvinder</a> /
@@ -71,6 +71,7 @@
     <span>Kula Skaljakke Kvinder</span>
 </nav>
 
+<!-- 🔹 HOVED LAYOUT -->
 <main class="product-layout">
 
     <!-- BILLEDE GALLERI -->
@@ -89,7 +90,15 @@
 
     <!-- KØBS PANEL -->
     <aside class="buybox">
+
         <h1>Kula Skaljakke Kvinder</h1>
+
+        <div class="product-badges">
+            <span>DWR behandling</span>
+            <span>snow cuff</span>
+            <span>åndbar</span>
+            <span>komfortabel</span>
+        </div>
 
         <div class="rating">
             <span>★★★★★</span>
@@ -98,17 +107,23 @@
 
         <div class="price">3.500,00 kr.</div>
 
-        <!-- Farver -->
-        <div class="color-selector">
-            <label>Farve:</label>
-            <div class="colors">
-                <button class="color"></button>
-                <button class="color"></button>
-                <button class="color"></button>
-            </div>
+        <!-- LÆG I KURV + HJERTE -->
+        <div class="buy-buttons">
+            <button class="add-to-cart-btn">læg i kurv</button>
+
+            <button class="wishlist-btn">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" 
+                     stroke="#3F4044" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 
+                    0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 
+                    0 0 0 0-7.8z"></path>
+                </svg>
+            </button>
         </div>
 
-        <!-- Størrelser -->
-        <div class="size-selector">
-            <label>Størrelse:</label>
-            <div class="sizes">
+    </aside>
+
+</main>
+
+</body>
+</html>
