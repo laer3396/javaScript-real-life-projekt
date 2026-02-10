@@ -1,53 +1,33 @@
-// Popup elementer
-const featurePopup = document.getElementById("featurePopup");
-const popupTitle = document.getElementById("popupTitle");
-const popupText = document.getElementById("popupText");
-const closeFeaturePopup = document.getElementById("closeFeaturePopup");
 
-// Tekster til hver feature
-const featureText = {
-    "åndbar": {
-        title: "Åndbar",
-        text: "Dette materiale absorberer fugt og lader overskydende sved fordampe, så du holdes tør, varm og komfortabel under hele din træning."
-    },
+document.addEventListener("DOMContentLoaded", () => {
+    
+    const popup = document.getElementById("popup");
+    const popupText = document.getElementById("popupText");
+    const closeBtn = document.getElementById("closePopup");
 
-    "tapede sømme": {
-        title: "Tapede sømme",
-        text: "DettDette produkt har tapede sømme. For at gøre dit produkt vandtæt, er der svejset vandtæt tape på indersiden af sømmene, så vandet ikke kan sive igenneme materiale absorberer fugt og lader overskydende sved fordampe, så du holdes tør, varm og komfortabel under hele din træning."
-    },
+    // Tekster til hver feature (i samme rækkefølge som dine billeder)
+    const featureTexts = {
+        "åndbar": "Denne jakke er åndbar og giver god ventilation.",
+        "tapede sømme": "De tapede sømme gør jakken ekstra vandtæt.",
+        "vandskyende": "Materialet afviser vand for at holde dig tør."
+    };
 
-    "vandskyende": {
-        title: "Vandskyende",
-        text: "Dette produkts overflade har fået en behandling, der gør det vandafvisende. Behandlingen vil aftage efter vask, men med det rette vaskemiddel kan du vedligeholde og forny dets funktion. Behandlingen er desuden PFC fri."
-    },
+    // Find alle billeder
+    const featureItems = document.querySelectorAll(".feature-item img");
 
-    "vandtæt": {
-        title: "Vandtæt",
-        text: "Dette produkt er vandafvisende, hvilket betyder, at det modvirker vand at trænge ind, men tillader fugt og sved at trænge ud. Dette produkt vil altså holde dig tør og komfortabel."
-    }
-};
-
-
-//Klik på feature-ikoner
-document.querySelectorAll(".feature-item").forEach(item => {
-    item.addEventListener("click", () => {
-        const feature = item.dataset.feature;
-
-        popupTitle.textContent = featureText[feature].title;
-        popupText.textContent = featureText[feature].text;
-
-        featurePopup.classList.remove("hidden");
+    featureItems.forEach(img => {
+        img.addEventListener("click", () => {
+            const altText = img.alt;   // bruger 'alt' til at finde beskrivelse
+            popupText.textContent = featureTexts[altText] || "Ingen tekst tilgængelig";
+            popup.style.display = "flex";
+        });
     });
-});
 
-//Luk popup
-closeFeaturePopup.addEventListener("click", () => {
-    featurePopup.classList.add("hidden");
-});
+    closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+    });
 
-//Luk popup ved klik udenfor boksen
-featurePopup.addEventListener("click", (e) => {
-    if (e.target === featurePopup) {
-        featurePopup.classList.add("hidden");
-    }
+    popup.addEventListener("click", (e) => {
+        if (e.target === popup) popup.style.display = "none";
+    });
 });
