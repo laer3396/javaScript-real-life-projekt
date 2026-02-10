@@ -12,9 +12,18 @@
 
     <script src="farver+størrelser.js" defer></script>
     <script src="nyhedsbrev.js" defer></script>
+    <script src="popupinfo.js" defer></script>
 </head>
 
 <body>
+
+<!-- ⭐ FEATURE POPUP --> <div id="featurePopup" class="popup hidden"> 
+    <div class="popup-content"> 
+        <button id="closeFeaturePopup" class="close-btn">×</button> 
+        <h2 id="popupTitle"></h2> 
+        <p id="popupText"></p> 
+    </div> 
+</div>
 
 <!-- 🔹 TOPBAR -->
 <div class="topbar">
@@ -110,7 +119,7 @@
 <!-- 🔹 HOVED LAYOUT -->
 <main class="product-layout">
 
-    <!-- BILLEDE GALLERI -->
+     <!-- BILLEDE GALLERI -->
     <section class="gallery">
         <div class="thumbs">
             <img src="images/jakke1.webp" alt="thumbnail 1">
@@ -146,6 +155,7 @@
 </section>
         </div>
     </section>
+    
 
     <!-- KØBS PANEL -->
     <aside class="buybox">
@@ -198,7 +208,7 @@
             </button>
         </div>
         <section class="accordion">
-  <details class="accordion-item">
+ <details class="accordion-item">
     <summary>detaljer</summary>
     <div class="accordion-panel">
       <ul>sport: ski køn:kvinder aldersgruppe: voksen lukning: lynlås lommer: waterproof zipper lynlåslommer brystlomme foransiddende lomme håndlomme inderlommer mesh inderlomme sidelomme lommer med lynlås i siden ærmelomme med vandtæt lynlås med vandafvisende lynlås lukning af lomme: vandtæt lynlås jakketype: ski halsudskæring: hage-beskyttende krave hætte med lynlås ærmedetaljer: indre kantbånd main material cuffs åben med justerbare stropper raglan ærmer med kantbånd endelse på ærme: kantbånd sku: sos253099_3039
@@ -236,31 +246,12 @@
       </ul>
     </div>
   </details>
+
 </section>
     </aside>
     
 </main>
-<section class="feature-box">
 
-    <div class="feature-item active">
-        <img src="images/andbar_icon.png" alt="">
-    </div>
-
-    <div class="feature-item">
-        <img src="images/tapede_icon.png" alt="">
-    </div>
-
-</section>
-
-<section class="feature-box2">
-
-    <div class="feature-item">
-        <img src="images/vandskyende_icon.png" alt="">
-    </div>
-
-    <div class="feature-item">
-        <img src="images/vandskyende_icon.png" alt="">
-    </div>
 
 </section>
 <footer class="site-footer desktop-only">
