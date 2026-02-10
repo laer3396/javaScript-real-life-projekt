@@ -1,48 +1,64 @@
 // BILLEDE-GALLERI DATA
 const productImages = {
-    black: [
+    driedsage: [
         "images/jakke1.webp",
         "images/jakke2.webp",
         "images/jakke3.webp",
-        "images/jakke4.webp"
+        "images/jakke4.webp",
+        "images/jakke5.webp",
+        "images/jakke6.webp",
+        "images/jakke7.webp",
+        "images/jakke8.webp"
     ],
-    blue: [
+    delicioso: [
         "images/brunjakke1.webp",
         "images/brunjakke2.webp",
         "images/brunjakke3.webp",
-        "images/brunjakke4.webp"
+        "images/brunjakke4.webp",
+        "images/brunjakke5.webp",
+        "images/brunjakke6.webp",
+        "images/brunjakke7.webp",
+        "images/brunjakke8.webp",
+        "images/brunjakke9.webp",
+        "images/brunjakke10.webp",
+        "images/brunjakke11.webp",
+        "images/brunjakke12.webp",
+        "images/brunjakke13.webp",
+        "images/brunjakke14.webp",
+        "images/brunjakke15.webp"
     ]
 };
+
 
 // FARVER
 document.querySelectorAll(".color-dot").forEach(dot => {
     dot.addEventListener("click", () => {
 
-        // Aktiv farve
         document.querySelectorAll(".color-dot").forEach(d => d.classList.remove("active"));
         dot.classList.add("active");
 
         const color = dot.dataset.color;
         const images = productImages[color];
 
-        // Skift hovedbillede
         const mainImg = document.querySelector(".main-image img");
         mainImg.src = images[0];
 
-        // Skift thumbnails
         const thumbs = document.querySelector(".thumbs");
         thumbs.innerHTML = "";
 
         images.forEach(src => {
             const img = document.createElement("img");
             img.src = src;
+
             img.addEventListener("click", () => {
                 mainImg.src = src;
             });
+
             thumbs.appendChild(img);
         });
     });
 });
+
 
 
 // STØRRELSER
