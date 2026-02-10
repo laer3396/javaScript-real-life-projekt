@@ -59,6 +59,23 @@ document.querySelectorAll(".color-dot").forEach(dot => {
     });
 });
 
+const thumbsContainer = document.querySelector(".thumbs");
+const scrollUp = document.querySelector(".thumb-scroll.up");
+const scrollDown = document.querySelector(".thumb-scroll.down");
+
+scrollUp.addEventListener("click", () => {
+    thumbsContainer.scrollBy({
+        top: -150,
+        behavior: "smooth"
+    });
+});
+
+scrollDown.addEventListener("click", () => {
+    thumbsContainer.scrollBy({
+        top: 150,
+        behavior: "smooth"
+    });
+});
 
 
 // STØRRELSER
