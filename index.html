@@ -17,11 +17,12 @@
 
 <body>
 
-<!-- FEATURE POPUP --> <div id="featurePopup" class="popup hidden"> 
-    <div class="popup-content"> 
-        <button id="closeFeaturePopup" class="close-btn">×</button> 
-        <p id="popupText"></p> 
-    </div> 
+<!-- FEATURE POPUP -->
+<div id="featurePopup" class="popup hidden">
+    <div class="popup-content">
+        <button id="closeFeaturePopup" class="close-btn">×</button>
+        <p id="popupText"></p>
+    </div>
 </div>
 
 <!-- 🔹 TOPBAR -->
@@ -31,7 +32,7 @@
         <div class="top-item">✓ Fri fragt ved køb over 499 kr.</div>
         <div class="top-item">⇄ 30 dages gratis retur</div>
         <div class="top-item">
-            <img src="images/lastbil_icon.png" alt="">
+            <img src="images/lastbil_icon.png" alt="Levering ikon">
             Hurtig levering 1-2 hverdage
         </div>
     </div>
@@ -75,7 +76,7 @@
 </header>
 
 <!-- 🔹 BREADCRUMBS -->
-<nav class="breadcrumbs">
+<nav class="breadcrumbs" aria-label="Brødkrummesti">
     <a href="#">Forside</a> /
     <a href="#">Kvinder</a> /
     <a href="#">Overtøj</a> /
@@ -89,77 +90,72 @@
 
 <!-- Popup -->
 <div class="newsletter-popup" id="newsletterPopup">
-  <button class="close-btn" id="closePopup">×</button>
+    <button class="close-btn" id="closePopup">×</button>
 
-  <!-- SIGNUP VIEW -->
-  <div id="signupView">
-    <h2>Få 10% rabat på dit første køb</h2>
-    <p>Tilmeld dig vores nyhedsbrev og få eksklusive tilbud.</p>
+    <!-- SIGNUP VIEW -->
+    <div id="signupView">
+        <h2>Få 10% rabat på dit første køb</h2>
+        <p>Tilmeld dig vores nyhedsbrev og få eksklusive tilbud.</p>
 
-    <form id="newsletterForm">
-      <input id="nameInput" type="text" placeholder="navn" required>
-      <input id="emailInput" type="email" placeholder="email" required>
-      <button type="submit" class="submit-btn">tilmeld nyhedsbrev</button>
-    </form>
-  </div>
+        <form id="newsletterForm">
+            <input id="nameInput" type="text" placeholder="navn" required>
+            <input id="emailInput" type="email" placeholder="email" required>
+            <button type="submit" class="submit-btn">tilmeld nyhedsbrev</button>
+        </form>
+    </div>
 
-  <!-- THANK YOU VIEW -->
-  <div id="thankyouView" style="display:none;">
-    <h2>Tak for din tilmelding!</h2>
-    <p>Du er nu en del af SOS-fællesskabet...</p>
-    <p>Din rabat er på vej til din indbakke.</p>
+    <!-- THANK YOU VIEW -->
+    <div id="thankyouView" style="display:none;">
+        <h2>Tak for din tilmelding!</h2>
+        <p>Du er nu en del af SOS-fællesskabet...</p>
+        <p>Din rabat er på vej til din indbakke.</p>
 
-    <a class="shop-btn" href="/shop" aria-label="Shop nu">Shop nu</a>
-  </div>
+        <a class="shop-btn" href="/shop" aria-label="Shop nu">Shop nu</a>
+    </div>
 </div>
-
-
 
 <!-- 🔹 HOVED LAYOUT -->
 <main class="product-layout">
 
     <!-- BILLEDE GALLERI -->
-<section class="gallery">
+    <section class="gallery">
 
-    <div class="thumbs-wrapper">
-        <button class="thumb-scroll up">▲</button>
+        <div class="thumbs-wrapper">
+            <button class="thumb-scroll up">▲</button>
+            <div class="thumbs"></div>
+            <button class="thumb-scroll down">▼</button>
+        </div>
 
-        <div class="thumbs"></div>
+        <div class="main-image">
+            <img src="images/jakke1.webp" alt="stort produktbillede">
 
-        <button class="thumb-scroll down">▼</button>
-    </div>
+            <section class="feature-box">
+                <div class="feature-item active">
+                    <img src="images/andbar_icon.png" alt="åndbar">
+                </div>
 
-    <div class="main-image">
-        <img src="images/jakke1.webp" alt="stort produktbillede">
+                <div class="feature-item">
+                    <img src="images/tapede_icon.png" alt="tapede sømme">
+                </div>
+            </section>
 
-        <section class="feature-box">
-            <div class="feature-item active">
-                <img src="images/andbar_icon.png" alt="">
-            </div>
+            <section class="feature-box2">
+                <div class="feature-item">
+                    <img src="images/vandskyende_icon.png" alt="vandskyende">
+                </div>
 
-            <div class="feature-item">
-                <img src="images/tapede_icon.png" alt="">
-            </div>
-        </section>
+                <div class="feature-item">
+                    <img src="images/vandskyende_icon.png" alt="vandskyende">
+                </div>
+            </section>
+        </div>
 
-        <section class="feature-box2">
-            <div class="feature-item">
-                <img src="images/vandskyende_icon.png" alt="">
-            </div>
-
-            <div class="feature-item">
-                <img src="images/vandskyende_icon.png" alt="">
-            </div>
-        </section>
-    </div>
-
-</section>
-
-    
+    </section> <!-- korrekt lukket -->
 
     <!-- KØBS PANEL -->
     <aside class="buybox">
-    <img src="images/LOGO.png" alt="Logo">
+
+        <img src="images/LOGO.png" alt="Logo">
 
         <h1>Kula Skaljakke Kvinder</h1>
 
@@ -171,135 +167,139 @@
         </div>
 
         <!-- FARVEVÆLGER -->
-<div class="color-options">
-<button class="color-dot active" data-color="driedsage" style="background:#b8bfa5;"></button>
-<button class="color-dot" data-color="delicioso" style="background:#1f3c88;"></button>
-</div>
+        <div class="color-options">
+            <button class="color-dot active" data-color="driedsage" style="background:#b8bfa5;"></button>
+            <button class="color-dot" data-color="delicioso" style="background:#1f3c88;"></button>
+        </div>
 
+        <!-- STØRRELSESVÆLGER -->
+        <div class="size-selector">
+            <label class="selector-label">Størrelse:</label>
 
-<!-- STØRRELSESVÆLGER -->
-<div class="size-selector">
-    <label class="selector-label">Størrelse:</label>
+            <div class="size-options">
+                <button class="size-btn" data-size="XS">XS</button>
+                <button class="size-btn" data-size="S">S</button>
+                <button class="size-btn" data-size="M">M</button>
+                <button class="size-btn" data-size="L">L</button>
+                <button class="size-btn disabled" data-size="XL" disabled>XL</button>
+            </div>
+        </div>
 
-    <div class="size-options">
-        <button class="size-btn" data-size="XS">XS</button>
-        <button class="size-btn" data-size="S">S</button>
-        <button class="size-btn" data-size="M">M</button>
-        <button class="size-btn" data-size="L">L</button>
-        <button class="size-btn disabled" data-size="XL" disabled>XL</button>
-    </div>
-</div>
-
-<!-- pris -->
-
- <div class="price">3.500,00 kr.</div>
+        <!-- PRIS -->
+        <div class="price">3.500,00 kr.</div>
 
         <!-- LÆG I KURV + HJERTE -->
         <div class="buy-buttons">
             <button class="add-to-cart-btn">læg i kurv</button>
 
             <button class="wishlist-btn">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" 
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none"
                      stroke="#3F4044" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 
-                    0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 
+                    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 
+                    0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 
                     0 0 0 0-7.8z"></path>
                 </svg>
             </button>
         </div>
+
+        <!-- AKKORDION -->
         <section class="accordion">
- <details class="accordion-item">
-    <summary>detaljer</summary>
-    <div class="accordion-panel">
-      <ul>sport: ski køn:kvinder aldersgruppe: voksen lukning: lynlås lommer: waterproof zipper lynlåslommer brystlomme foransiddende lomme håndlomme inderlommer mesh inderlomme sidelomme lommer med lynlås i siden ærmelomme med vandtæt lynlås med vandafvisende lynlås lukning af lomme: vandtæt lynlås jakketype: ski halsudskæring: hage-beskyttende krave hætte med lynlås ærmedetaljer: indre kantbånd main material cuffs åben med justerbare stropper raglan ærmer med kantbånd endelse på ærme: kantbånd sku: sos253099_3039
-      </ul>
-    </div>
-  </details>
 
-  <details class="accordion-item">
-    <summary>pasform</summary>
-    <div class="accordion-panel">
-      <ul>
-        <li>snit:normal pasform</li>
-        <li>længde (top):hofte længde</li>
-        <li>længde (ærmer):lange ærmer</li>
-      </ul>
-    </div>
-  </details>
+            <details class="accordion-item">
+                <summary>detaljer</summary>
+                <div class="accordion-panel">
+                    sport: ski køn: kvinder aldersgruppe: voksen ...
+                </div>
+            </details>
 
-  <details class="accordion-item">
-    <summary>materiale og vask</summary>
-    <div class="accordion-panel">
-      <ul>
-        <li>Skal: 100% polyester</li>
-        <li>For: 100% nylon</li>
-        <li>Vask: 30°C skåne, ingen skyllemiddel, hængetørres</li>
-      </ul>
-    </div>
-  </details>
+            <details class="accordion-item">
+                <summary>pasform</summary>
+                <div class="accordion-panel">
+                    <ul>
+                        <li>snit: normal pasform</li>
+                        <li>længde (top): hofte længde</li>
+                        <li>længde (ærmer): lange ærmer</li>
+                    </ul>
+                </div>
+            </details>
 
-  <details class="accordion-item">
-    <summary>egenskaber</summary>
-    <div class="accordion-panel">
-        <ul>
-      <li>Åndbar, tapede sømme, vandtæt, vandskyende.</li>
-      </ul>
-    </div>
-  </details>
+            <details class="accordion-item">
+                <summary>materiale og vask</summary>
+                <div class="accordion-panel">
+                    <ul>
+                        <li>Skal: 100% polyester</li>
+                        <li>For: 100% nylon</li>
+                        <li>Vask: 30°C skåne, ingen skyllemiddel, hængetørres</li>
+                    </ul>
+                </div>
+            </details>
 
-</section>
+            <details class="accordion-item">
+                <summary>egenskaber</summary>
+                <div class="accordion-panel">
+                    <ul>
+                        <li>Åndbar, tapede sømme, vandtæt, vandskyende.</li>
+                    </ul>
+                </div>
+            </details>
+
+        </section>
+
     </aside>
-    
+
 </main>
 
-
-</section>
+<!-- FOOTER -->
 <footer class="site-footer desktop-only">
-  <!-- Øverste linje -->
-  <div class="footer-top">
-    <!-- Sociale ikoner -->
-    <div class="footer-social" aria-label="Sociale medier">
-      <a href="#" class="social-btn" aria-label="Instagram">
-        <img src="images/insta_icon.png" alt="">
-      </a>
-      <a href="#" class="social-btn" aria-label="Facebook">
-        <img src="images/facebook_icon.png" alt="">
-      </a>
-      <a href="#" class="social-btn" aria-label="YouTube">
-        <img src="images/youtube_icon.png">
-      </a>
+
+    <div class="footer-top">
+
+        <!-- Sociale ikoner -->
+<nav class="footer-social" aria-label="Sociale medier">
+    <a href="#" class="social-btn" aria-label="Instagram">
+        <img src="images/insta_icon.png" alt="Instagram">
+    </a>
+    <a href="#" class="social-btn" aria-label="Facebook">
+        <img src="images/facebook_icon.png" alt="Facebook">
+    </a>
+    <a href="#" class="social-btn" aria-label="YouTube">
+        <img src="images/youtube_icon.png" alt="YouTube">
+    </a>
+</nav>
+
+        <!-- Footer links -->
+        <nav class="footer-links" aria-label="Footer navigation">
+            <div class="footer-col">
+                <h2>kundeservice</h2>
+                <a href="#">kontakt os</a>
+                <a href="#">levering</a>
+                <a href="#">fragt og retur</a>
+            </div>
+
+            <div class="footer-col">
+                <h2>handelsbetingelser</h2>
+                <a href="#">handelsbetingelser</a>
+                <a href="#">privatlivs- & cookie politik</a>
+            </div>
+
+            <div class="footer-col">
+                <h2>shop</h2>
+                <a href="#">herre</a>
+                <a href="#">damer</a>
+                <a href="#">teknisk overtøj</a>
+                <a href="#">superior</a>
+                <a href="#">nyheder</a>
+            </div>
+        </nav>
+
+        <!-- Brand -->
+        <div class="footer-brand">
+            <img src="images/sosfooter_icon.png" alt="SOS logo">
+        </div>
+
     </div>
 
-    <!-- Link-kolonner -->
-    <nav class="footer-links" aria-label="Footer navigation">
-      <div class="footer-col">
-        <h4>kundeservice</h4>
-        <a href="#">kontakt os</a>
-        <a href="#">levering</a>
-        <a href="#">fragt og retur</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>handelsbetingelser</h4>
-        <a href="#">handelsbetingelser</a>
-        <a href="#">privatlivs- &amp; cookie politik</a>
-      </div>
-
-      <div class="footer-col">
-        <h4>shop</h4>
-        <a href="#">herre</a>
-        <a href="#">damer</a>
-        <a href="#">teknisk overtøj</a>
-        <a href="#">superior</a>
-        <a href="#">nyheder</a>
-      </div>
-    </nav>
-
-    <!-- Brand logo -->
-    <div class="footer-brand">
-      <img src="images/sosfooter_icon.png" alt="SOS logo">
-    </div>
-  </div>
+</footer>
 
 </body>
 </html>
