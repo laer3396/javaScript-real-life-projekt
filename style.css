@@ -3,6 +3,11 @@
 body { 
     font-family:'Montserrat'; 
     font-weight: 300;
+    
+}
+
+h2{
+    font-size: 16px;
 }
 
 /******** HEADER ********/
@@ -655,8 +660,6 @@ padding: 0;
 }
 .footer-brand img{
   width:300px;  /* justér efter dit logo */
-
-
 }
 
 /*overlay*/
