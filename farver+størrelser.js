@@ -1,16 +1,49 @@
+// BILLEDE-GALLERI DATA
+const productImages = {
+    black: [
+        "images/jakke1.webp",
+        "images/jakke2.webp",
+        "images/jakke3.webp",
+        "images/jakke4.webp"
+    ],
+    blue: [
+        "images/brunjakke1.webp",
+        "images/brunjakke2.webp",
+        "images/brunjakke3.webp",
+        "images/brunjakke4.webp"
+    ]
+};
+
 // FARVER
 document.querySelectorAll(".color-dot").forEach(dot => {
     dot.addEventListener("click", () => {
 
-        // Skift aktiv farve
+        // Aktiv farve
         document.querySelectorAll(".color-dot").forEach(d => d.classList.remove("active"));
         dot.classList.add("active");
 
+        const color = dot.dataset.color;
+        const images = productImages[color];
+
         // Skift hovedbillede
-        const newImage = dot.dataset.image;
-        document.querySelector(".main-image img").src = newImage;
+        const mainImg = document.querySelector(".main-image img");
+        mainImg.src = images[0];
+
+        // Skift thumbnails
+        const thumbs = document.querySelector(".thumbs");
+        thumbs.innerHTML = "";
+
+        images.forEach(src => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.addEventListener("click", () => {
+                mainImg.src = src;
+            });
+            thumbs.appendChild(img);
+        });
     });
 });
+
 
 // STØRRELSER
 document.querySelectorAll(".size-btn").forEach(btn => {
