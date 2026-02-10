@@ -1,79 +1,45 @@
+document.addEventListener("DOMContentLoaded", () => {
 
-document.addEventListener('DOMContentLoaded', function () {
+  // Små hjælpefunktioner
+  const $ = id => document.getElementById(id);
+  const show = el => el.style.display = "flex";
+  const hide = el => el.style.display = "none";
 
-  // ─────────────────────────────────────────
-  // LILLE "LIBRARY" (hjælpeobjekt)
-  // ─────────────────────────────────────────
-  const utils = {
-    trim: (str) => str.trim(),
-    show: (el) => el.style.display = "flex",
-    hide: (el) => el.style.display = "none",
-  };
+  // DOM
+  const tab = $("newsletterTab");
+  const popup = $("newsletterPopup");
+  const closeBtn = $("closePopup");
+  const form = $("newsletterForm");
+  const signupView = $("signupView");
+  const thankyouView = $("thankyouView");
 
-
-  // ─────────────────────────────────────────
-  // DOM ELEMENTS
-  // ─────────────────────────────────────────
-  const tab = document.getElementById("newsletterTab");
-  const popup = document.getElementById("newsletterPopup");
-  const closeBtn = document.getElementById("closePopup");
-  const form = document.getElementById("newsletterForm");
-  const signupView = document.getElementById("signupView");
-  const thankyouView = document.getElementById("thankyouView");
-
-  
-  // ─────────────────────────────────────────
-  //  ARRAY + LOOP (liste over acceptable værdier)
-  // ─────────────────────────────────────────
+  // Tilladte brugere
   const allowedUsers = [
     { name: "Mathilde", email: "test@example.com" },
     { name: "Lærke", email: "laerke@example.com" },
     { name: "Ela", email: "ela@example.com" }
   ];
-  // ✔ Arrays
-  // ✔ Loops
 
+  // Events
+  tab?.addEventListener("click", () => popup.classList.add("open"));
+  closeBtn?.addEventListener("click", () => popup.classList.remove("open"));
 
-  // ─────────────────────────────────────────
-  //  EVENTS
-  // ─────────────────────────────────────────
-  if (tab && popup) {
-    tab.addEventListener("click", () => popup.classList.add("open"));
-  }
+  // Form submit
+  form?.addEventListener("submit", e => {
+    e.preventDefault();
 
-  if (closeBtn && popup) {
-    closeBtn.addEventListener("click", () => popup.classList.remove("open"));
-  }
+    const name = $("nameInput").value.trim();
+    const email = $("emailInput").value.trim();
 
+    const isValid = allowedUsers.some(user =>
+      user.name === name && user.email === email
+    );
 
-  // ─────────────────────────────────────────
-  //  FORM SUBMIT
-  // ─────────────────────────────────────────
-  if (form && signupView && thankyouView) {
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const name = utils.trim(document.getElementById("nameInput")?.value || "");
-      const email = utils.trim(document.getElementById("emailInput")?.value || "");
-
-      let isValid = false;
-
-      // LOOPER gennem arrayet for at finde et match
-      for (let i = 0; i < allowedUsers.length; i++) {
-        if (allowedUsers[i].name === name && allowedUsers[i].email === email) {
-          isValid = true;
-          break;
-        }
-      }
-
-      if (isValid) {
-        utils.hide(signupView);
-        utils.show(thankyouView);
-      } else {
-        alert("Forkert navn eller email");
-      }
-    });
-  }
+    if (isValid) {
+      hide(signupView);
+      show(thankyouView);
+    } else {
+      alert("Forkert navn eller email");
+    }
+  });
 });
-
