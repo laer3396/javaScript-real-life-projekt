@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // ─────────────────────────────────────────
   const allowedUsers = [
     { name: "Mathilde", email: "test@example.com" },
-    { name: "Lærke", email: "lærke@example.com" },
+    { name: "Lærke", email: "laerke@example.com" },
     { name: "Ela", email: "ela@example.com" }
   ];
   // ✔ Arrays
