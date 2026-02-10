@@ -259,7 +259,7 @@ body {
 .product-layout {
     max-width: 1200px;
     margin: 1px auto;
-    padding: 0 20px;
+
     display: grid;
     grid-template-columns: 1fr 500px;
     gap: 40px;
@@ -521,18 +521,15 @@ padding: 0;
 
 
 .feature-box {
-    width: 498px;
-    margin-left: 295px;
+    width:600px;
     display: flex;
     justify-content: space-between;
-    gap: 20px;
     background-color: #D0D1D3; /* samme gråt som dit screenshot */
 
 }
 
 .feature-box2 {
-    width: 498px;
-    margin-left: 295px;
+    width: 600px;
     display: flex;
     justify-content: space-between;
     gap: 20px;
