@@ -113,10 +113,6 @@
     <!-- BILLEDE GALLERI -->
     <section class="gallery">
         <div class="thumbs">
-            <img src="images/jakke1.webp" alt="thumbnail 1">
-            <img src="images/jakke2.webp" alt="thumbnail 2">
-            <img src="images/jakke3.webp" alt="thumbnail 3">
-            <img src="images/jakke4.webp" alt="thumbnail 4">
         </div>
 
         <div class="main-image">
@@ -210,7 +206,7 @@ raglan ærmer</p>
 med kantbånd 
 endelse på ærme:
 kantbånd</p>
-sku: sos253099_3250</p>
+sku: sos253099_3250 </p>
 </ul>
     </div>
   </details>
@@ -261,7 +257,9 @@ sku: sos253099_3250</p>
 
 <section class="feature-box2">
 
-    <div class="feature-item">
+    <div class="feature-item"
+        data-title="Vandtæt"
+        data-text="Dette produkt er vandafvisende, hvilket betyder, at det modvirker vand at trænge ind, men tillader fugt og sved at trænge ud. Dette produkt vil altså holde dig tør og komfortabel.">
         <img src="images/vandskyende_icon.png" alt="">
     </div>
 
@@ -317,5 +315,23 @@ sku: sos253099_3250</p>
     </div>
   </div>
 
+  <!-- POPUP info-->
+  <div class="modal-overlay" id="featureModal">
+  <div class="modal">
+
+<!-- POPUP lukknap-->
+ <button class="modal-close">×</button>
+
+  <div class="modal-head">
+    <span class="modal-label">detaljer</span>
+  </div>
+
+  <!--JS titel-->
+  <h2 class="modal-title" id="modalTitle"></h2>
+
+  <!--JS tekst-->
+  <p class="modal-tekst" id="modalTekst"></p>
+    </div>
+  </div>
 </body>
 </html>
