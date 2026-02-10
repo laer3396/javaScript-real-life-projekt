@@ -182,7 +182,6 @@ body {
     z-index: 1;
 }
 
-
 .newsletter-popup.open {
     right: 20px; /* folder ud */
 }
@@ -204,7 +203,7 @@ body {
 .newsletter-popup p{
     padding-right: 30px;
     padding-left: 30px;
-    margin-top: 25px;
+   
 }
 
 .newsletter-popup input {
