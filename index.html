@@ -14,17 +14,14 @@
     <script src="nyhedsbrev.js" defer></script>
     <script src="popupinfo.js" defer></script>
 </head>
-
-<body>
-
-<!-- FEATURE POPUP -->
-<div id="featurePopup" class="popup hidden">
+<div id="popup" class="popup">
     <div class="popup-content">
-        <button id="closeFeaturePopup" class="close-btn">×</button>
+        <span id="closePopup" class="close">&times;</span>
         <p id="popupText"></p>
     </div>
 </div>
 
+<body>
 <!-- 🔹 TOPBAR -->
 <div class="topbar">
 
@@ -145,7 +142,7 @@
                 </div>
 
                 <div class="feature-item" data-feature="vandtæt">
-                    <img src="images/vandtaet_icon.png" alt="">
+                    <img src="images/vandtæt_icon.png" alt="">
                 </div>
             </section>
         </div>
@@ -300,6 +297,5 @@
     </div>
 
 </footer>
-
 </body>
 </html>
