@@ -162,3 +162,21 @@ scrollDown.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+
+
+// Scroll rundt så bund går til top
+
+thumbsContainer.addEventListener("scroll", () => {
+    const maxScroll = thumbsContainer.scrollHeight - thumbsContainer.clientHeight;
+
+    // Hvis man scroller helt ned → hop til top
+    if (thumbsContainer.scrollTop >= maxScroll) {
+        thumbsContainer.scrollTop = 0;
+    }
+
+    // Hvis man scroller helt op → hop til bund
+    if (thumbsContainer.scrollTop <= 0) {
+        thumbsContainer.scrollTop = maxScroll;
+    }
+});
+
