@@ -7,9 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Tekster til hver feature (i samme rækkefølge som dine billeder)
     const featureTexts = {
-        "åndbar": "Denne jakke er åndbar og giver god ventilation.",
-        "tapede sømme": "De tapede sømme gør jakken ekstra vandtæt.",
-        "vandskyende": "Materialet afviser vand for at holde dig tør."
+        "åndbar": "Dette materiale absorberer fugt og lader overskydende sved fordampe, så du holdes tør, varm og komfortabel under hele din træning.",
+        "tapede sømme": "Dette produkt har tapede sømme. For at gøre dit produkt vandtæt, er der svejset vandtæt tape på indersiden af sømmene, så vandet ikke kan sive igennem.",
+        "vandskyende": "Dette produkts overflade har fået en behandling, der gør det vandafvisende. Behandlingen vil aftage efter vask, men med det rette vaskemiddel kan du vedligeholde og forny dets funktion. Behandlingen er desuden PFC fri.",
+        "vandtæt": "Dette produkt er vandafvisende, hvilket betyder, at det modvirker vand at trænge ind, men tillader fugt og sved at trænge ud. Dette produkt vil altså holde dig tør og komfortabel."
     };
 
     // Find alle billeder
