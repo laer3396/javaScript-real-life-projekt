@@ -283,7 +283,12 @@ body {
 .thumbs {
     max-height: 600px;
     overflow-y: auto;
-    padding-right: 5px;
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE */
+}
+
+.thumbs::-webkit-scrollbar {
+    display: none;              /* Chrome/Safari */
 }
 
 .thumbs img {
@@ -296,6 +301,30 @@ body {
 
 .thumbs img:hover {
     opacity: .7;
+}
+
+.thumbs-wrapper {
+    position: relative;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.thumb-scroll {
+    width: 100%;
+    padding: 8px 0;
+    background: #D0D1D3;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #3F4044;
+    transition: background .2s;
+}
+
+.thumb-scroll:hover {
+    background: #C2C3C5;
 }
 
 
