@@ -12,9 +12,18 @@
 
     <script src="farver+størrelser.js" defer></script>
     <script src="nyhedsbrev.js" defer></script>
+    <script src="popupinfo.js" defer></script>
 </head>
 
 <body>
+
+<!-- ⭐ FEATURE POPUP --> <div id="featurePopup" class="popup hidden"> 
+    <div class="popup-content"> 
+        <button id="closeFeaturePopup" class="close-btn">×</button> 
+        <h2 id="popupTitle"></h2> 
+        <p id="popupText"></p> 
+    </div> 
+</div>
 
 <!-- 🔹 TOPBAR -->
 <div class="topbar">
@@ -245,11 +254,11 @@ sku: sos253099_3250 </p>
 </main>
 <section class="feature-box">
 
-    <div class="feature-item active">
-        <img src="images/andbar_icon.png" alt="">
-    </div>
+ <div class="feature-item" data-feature="åndbar"> 
+    <img src="images/andbar_icon.png" alt=""> 
+</div>
 
-    <div class="feature-item">
+    <div class="feature-item" data-feature="tapede sømme"> 
         <img src="images/tapede_icon.png" alt="">
     </div>
 
@@ -257,14 +266,12 @@ sku: sos253099_3250 </p>
 
 <section class="feature-box2">
 
-    <div class="feature-item"
-        data-title="Vandtæt"
-        data-text="Dette produkt er vandafvisende, hvilket betyder, at det modvirker vand at trænge ind, men tillader fugt og sved at trænge ud. Dette produkt vil altså holde dig tør og komfortabel.">
+    <div class="feature-item" data-feature="vandskyende"> 
         <img src="images/vandskyende_icon.png" alt="">
     </div>
 
-    <div class="feature-item">
-        <img src="images/vandskyende_icon.png" alt="">
+    <div class="feature-item" data-feature="vandtæt"> 
+        <img src="images/vandtaet_icon.png" alt="">
     </div>
 
 </section>
@@ -315,23 +322,5 @@ sku: sos253099_3250 </p>
     </div>
   </div>
 
-  <!-- POPUP info-->
-  <div class="modal-overlay" id="featureModal">
-  <div class="modal">
-
-<!-- POPUP lukknap-->
- <button class="modal-close">×</button>
-
-  <div class="modal-head">
-    <span class="modal-label">detaljer</span>
-  </div>
-
-  <!--JS titel-->
-  <h2 class="modal-title" id="modalTitle"></h2>
-
-  <!--JS tekst-->
-  <p class="modal-tekst" id="modalTekst"></p>
-    </div>
-  </div>
 </body>
 </html>
