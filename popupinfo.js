@@ -1,33 +1,41 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-    
-    const popup = document.getElementById("popup");
-    const popupText = document.getElementById("popupText");
-    const closeBtn = document.getElementById("closePopup");
+  // Lille "library" (hjælpeobjekt)
+  const utils = {
+    show: el => (el.style.display = "flex"),
+    hide: el => (el.style.display = "none"),
+    text: (el, str) => (el.textContent = str)
+  };
 
-    // Tekster til hver feature (i samme rækkefølge som dine billeder)
-    const featureTexts = {
-        "åndbar": "Denne jakke er åndbar og giver god ventilation.",
-        "tapede sømme": "De tapede sømme gør jakken ekstra vandtæt.",
-        "vandskyende": "Materialet afviser vand for at holde dig tør."
-    };
+  const popup = document.getElementById("popup");
+  const popupText = document.getElementById("popupText");
+  const closeBtn = document.getElementById("closePopup");
 
-    // Find alle billeder
-    const featureItems = document.querySelectorAll(".feature-item img");
+  // Objekter + Arrays
+  const featureTexts = {
+    "åndbar": "Denne jakke er åndbar og giver god ventilation.",
+    "tapede sømme": "De tapede sømme gør jakken ekstra vandtæt.",
+    "vandskyende": "Materialet afviser vand for at holde dig tør."
+  };
+  const featureKeys = ["åndbar", "tapede sømme", "vandskyende"]; // rent array til pensum
 
-    featureItems.forEach(img => {
-        img.addEventListener("click", () => {
-            const altText = img.alt;   // bruger 'alt' til at finde beskrivelse
-            popupText.textContent = featureTexts[altText] || "Ingen tekst tilgængelig";
-            popup.style.display = "flex";
-        });
+  // Debug-eksempel
+  console.log("Kendte features:", featureKeys);
+
+  // Find alle billeder
+  const featureItems = document.querySelectorAll(".feature-item img");
+
+  featureItems.forEach((img) => {
+    img.addEventListener("click", () => {
+      // Eksempel på let + block scope
+      let altText = img.alt;
+      utils.text(popupText, featureTexts[altText] || "Ingen tekst tilgængelig");
+      utils.show(popup);
     });
+  });
 
-    closeBtn.addEventListener("click", () => {
-        popup.style.display = "none";
-    });
+  closeBtn.addEventListener("click", () => utils.hide(popup));
 
-    popup.addEventListener("click", (e) => {
-        if (e.target === popup) popup.style.display = "none";
-    });
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) utils.hide(popup);
+  });
 });
