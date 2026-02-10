@@ -20,9 +20,8 @@ form.addEventListener("submit", function(e) {
     const name = document.getElementById("nameInput").value.trim();
     const email = document.getElementById("emailInput").value.trim();
 
-    // ← Her bestemmer du hvilke værdier der skal acceptere skiftet
-  const validNames = ["Mathilde", "Lærke", "Ela"];
-    const validEmail = "test@gruppe11.com";
+    const validName = "Mathilde";
+    const validEmail = "test@example.com";
 
     if (name === validName && email === validEmail) {
         signupView.style.display = "none";
